@@ -28,15 +28,16 @@ describe('Pact Verification', () => {
     const fetchPactsDynamicallyOpts = {
       provider: 'pactflow-example-provider',
       consumerVersionSelectors: [
-        { mainBranch: true },
-        { deployed: true },
-        { matchingBranch: true }
+        // { mainBranch: true },
+        // { deployed: true },
+        { matchingBranch: true },
+        //{branch: 'feat/new-flag'}
       ],
       pactBrokerUrl: process.env.PACT_BROKER_BASE_URL,
       // https://docs.pact.io/pact_broker/advanced_topics/pending_pacts
       enablePending: true,
       // https://docs.pact.io/pact_broker/advanced_topics/wip_pacts
-      includeWipPactsSince: '2020-01-01'
+      //includeWipPactsSince: '2020-01-01'
     };
 
     const opts = {
