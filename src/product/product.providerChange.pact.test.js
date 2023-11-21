@@ -28,8 +28,8 @@ describe('Pact Verification', () => {
     const fetchPactsDynamicallyOpts = {
       provider: 'pactflow-example-provider',
       consumerVersionSelectors: [
-        // { mainBranch: true },
-        // { deployed: true },
+        { mainBranch: true },
+        { deployed: true },
         { matchingBranch: true },
         //{branch: 'feat/new-flag'}
       ],
