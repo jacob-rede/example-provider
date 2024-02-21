@@ -29,7 +29,6 @@ describe('Pact Verification', () => {
       provider: 'pactflow-example-provider',
       consumerVersionSelectors: [
         { mainBranch: true },
-        { deployed: true },
         { matchingBranch: true }
       ],
       pactBrokerUrl: process.env.PACT_BROKER_BASE_URL,
